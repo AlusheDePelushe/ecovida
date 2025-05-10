@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecovida Orgánica - Alimentos Naturales</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2e8b57;
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #3cb371;
+        }
+        
+        /* Secciones */
+        section {
+            padding: 50px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2e8b57;
+            font-size: 2rem;
+        }
+        
+        /* Productos */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        /* Video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            margin: 30px 0;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        
+        /* Testimonios */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Contacto */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">Ecovida Orgánica</div>
+            <p>Alimentos naturales cultivados con amor</p>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre el poder de lo natural</h1>
+            <p>Productos 100% orgánicos para una vida saludable</p>
+            <a href="#productos" class="btn">Ver productos</a>
+        </div>
+    </section>
+    
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="container">
+        <h2>Sobre Nosotros</h2>
+        <div style="display: flex; align-items: center; gap: 30px;">
+            <div style="flex: 1;">
+                <p>En Ecovida Orgánica llevamos más de 10 años cultivando alimentos sin pesticidas ni químicos, respetando los ciclos naturales de la tierra.</p>
+                <p>Nuestra misión es conectar a las personas con alimentos nutritivos que cuiden su salud y el medio ambiente.</p>
+            </div>
+            <div style="flex: 1;">
+                <img src="https://via.placeholder.com/500x300" alt="Granja orgánica" style="width: 100%; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Productos -->
+    <section id="productos" class="container">
+        <h2>Nuestros Productos</h2>
+        <p style="text-align: center;">Descubre nuestra selección de alimentos orgánicos</p>
+        
+        <div class="product-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Frutas orgánicas" class="product-img">
+                <div class="product-info">
+                    <h3>Frutas de Temporada</h3>
+                    <p>Cultivadas al sol, sin aditivos artificiales.</p>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Verduras orgánicas" class="product-img">
+                <div class="product-info">
+                    <h3>Verduras Frescas</h3>
+                    <p>Recolectadas el mismo día de la entrega.</p>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Miel orgánica" class="product-img">
+                <div class="product-info">
+                    <h3>Miel Pura</h3>
+                    <p>De nuestras colmenas a tu mesa.</p>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pan artesanal" class="product-img">
+                <div class="product-info">
+                    <h3>Pan Artesanal</h3>
+                    <p>Elaborado con harinas integrales orgánicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video -->
+    <section class="container">
+        <h2>Nuestro Proceso</h2>
+        <p style="text-align: center;">Conoce cómo cultivamos tus alimentos</p>
+        
+        <div class="video-container">
+            <!-- Reemplaza con tu video -->
+            <iframe src="https://www.youtube.com/embed/ejemplo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    
+    <!-- Testimonios -->
+    <section class="container">
+        <h2>Lo que dicen nuestros clientes</h2>
+        
+        <div class="testimonials">
+            <!-- Testimonio 1 -->
+            <div class="testimonial">
+                <p>"Desde que consumo los productos de Ecovida, mi salud ha mejorado notablemente. ¡Se nota la diferencia!"</p>
+                <p><strong>- María G.</strong></p>
+            </div>
+            
+            <!-- Testimonio 2 -->
+            <div class="testimonial">
+                <p>"El sabor de las frutas es incomparable. Mis hijos ahora prefieren estos snacks saludables."</p>
+                <p><strong>- Carlos M.</strong></p>
+            </div>
+            
+            <!-- Testimonio 3 -->
+            <div class="testimonial">
+                <p>"Excelente servicio y productos de primera calidad. Mi familia ya no compra en otro lugar."</p>
+                <p><strong>- Laura T.</strong></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section id="contacto" class="container">
+        <h2>Contáctanos</h2>
+        
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="logo">Ecovida Orgánica</div>
+            <p>Alimentando vidas de forma natural</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+            <p>&copy; 2023 Ecovida Orgánica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    <!-- Iconos (Font Awesome) -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
